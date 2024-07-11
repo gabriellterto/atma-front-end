@@ -1,0 +1,77 @@
+document.addEventListener("DOMContentLoaded", () => {
+Esta linha adiciona um ouvinte de evento que espera até que todo o conteúdo do HTML seja carregado e processado antes de executar a função que vem a seguir. Isso garante que todos os elementos do DOM (Document Object Model) estejam prontos para serem manipulados.
+
+javascript
+Copiar código
+    const profileImage = document.getElementById("profile-image");
+    const profileDescription = document.getElementById("profile-description");
+    const editProfileButton = document.getElementById("edit-profile-button");
+    const profileImageUpload = document.getElementById("profile-image-upload");
+    const charCount = document.getElementById("char-count");
+Essas linhas capturam os elementos HTML pelo seu ID e os armazenam em variáveis para fácil acesso. Isso inclui a imagem do perfil, a descrição do perfil, o botão de editar perfil, o campo de upload de imagem e o contador de caracteres.
+
+javascript
+Copiar código
+    const savedImage = localStorage.getItem("profileImage");
+    const savedDescription = localStorage.getItem("profileDescription");
+Aqui, estamos obtendo os dados salvos no armazenamento local do navegador. localStorage é uma maneira de armazenar dados no navegador que persistem mesmo após fechar a página.
+
+javascript
+Copiar código
+    if (savedImage) {
+        profileImage.src = savedImage;
+    }
+
+    if (savedDescription) {
+        profileDescription.value = savedDescription;
+    }
+Essas linhas verificam se há uma imagem de perfil e uma descrição de perfil salvas no localStorage. Se existirem, definem esses dados nos elementos HTML correspondentes.
+
+javascript
+Copiar código
+    profileDescription.addEventListener("input", () => {
+Adiciona um ouvinte de evento que detecta quando o usuário digita algo no campo de descrição do perfil.
+
+javascript
+Copiar código
+        const textLength = profileDescription.value.length;
+        charCount.textContent = `${textLength}/40 caracteres`;
+Conta o número de caracteres digitados e atualiza o contador de caracteres na tela.
+
+javascript
+Copiar código
+        if (textLength > 40) {
+            profileDescription.value = profileDescription.value.slice(0, 40);
+            charCount.textContent = "Limite de 40 caracteres atingido!";
+        }
+Se o número de caracteres exceder 40, corta o texto para o limite de 40 caracteres e exibe uma mensagem de aviso.
+
+javascript
+Copiar código
+    editProfileButton.addEventListener("click", () => {
+        profileImageUpload.click();
+    });
+Adiciona um ouvinte de evento que simula um clique no campo de upload de imagem quando o botão de editar perfil é clicado.
+
+javascript
+Copiar código
+    profileImageUpload.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                profileImage.src = e.target.result;
+                localStorage.setItem("profileImage", e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+Adiciona um ouvinte de evento para o campo de upload de imagem. Quando um arquivo é selecionado, o conteúdo do arquivo é lido e a imagem do perfil é atualizada. O conteúdo da imagem é então salvo no localStorage.
+
+javascript
+Copiar código
+    profileDescription.addEventListener("blur", () => {
+        localStorage.setItem("profileDescription", profileDescription.value);
+    });
+});
+Adiciona um ouvinte de evento que salva a descrição do perfil no localStorage quando o campo de descrição perde o foco (ou seja, quando o usuário clica fora do campo de texto).

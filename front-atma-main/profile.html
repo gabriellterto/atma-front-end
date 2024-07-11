@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Perfil</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="Logo_Atma_transparente.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Produtos</a></li>
+            <li><a href="cart.html">Carrinho</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Nome do Usuário</h1>
+    </header>
+
+    <main>
+        <section id="info">
+            <div class="profile">
+                <img id="profile-image" src="default-profile.png" alt="Foto de Perfil">
+                <textarea id="profile-description" placeholder="Escreva algo sobre você..."></textarea>
+                <span id="char-count"></span>
+                <button id="edit-profile-button">Editar Perfil</button>
+                <input type="file" id="profile-image-upload" accept="image/*">
+            </div>
+        </section>
+
+        <section id="games">
+            <h2>Jogos Favoritos</h2>
+            <div class="favorite-games">
+                <div class="game-card">
+                    <img src="./IMAGENS/bg.jpg" alt="Jogo 1">
+                    <p>Jogo 1</p>
+                </div>
+                <div class="game-card">
+                    <img src="./IMAGENS/er.jpg" alt="Jogo 2">
+                    <p>Jogo 2</p>
+                </div>
+                <div class="game-card">
+                    <img src="./IMAGENS/hades.jpg" alt="Jogo 3">
+                    <p>Jogo 3</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loja de Jogos</p>
+        <p><strong>Nome Fantasia:</strong> Sua Empresa Fantástica</p>
+        <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123, Bairro, Cidade, Estado, CEP 00000-000</p>
+        <p><strong>Email:</strong> contato@suaempresa.com.br</p>
+        <p><strong>SAC:</strong> 0800 000 0000</p>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>

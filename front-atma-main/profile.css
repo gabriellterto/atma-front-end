@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Limelight&family=Major+Mono+Display&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header {
+    background-color: #03cc5e;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Lekton", monospace;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 60px; /* Espaco para o footer */
+}
+
+#info {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin: 20px auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#profile-description {
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#char-count {
+    margin-bottom: 10px;
+    color: red;
+}
+
+#edit-profile-button {
+    background-color: #03cc5e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#profile-image-upload {
+    display: none;
+}
+
+#games {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#games h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.favorite-games {
+    display: flex;
+    justify-content: center;
+}
+
+.game-card {
+    min-width: 100px;
+    margin-right: 20px;
+    background-color: #eee;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 5px 0; 
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.8em; 
+}
